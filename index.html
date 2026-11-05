@@ -240,42 +240,35 @@ section:first-of-type{padding-top:140px}
 .edu-year{font-size:.82rem;color:var(--mint);font-weight:500}
 .edu-grade{font-size:.82rem;color:var(--muted);margin-top:3px}
 /* ── CONTACT ── */
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+.contact-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-width:600px;
 }
-.contact-card{
+.contact-row{
   background:var(--card);border:1px solid var(--border);
-  border-radius:10px;padding:20px 22px;
+  border-radius:10px;padding:16px 22px;
   text-decoration:none;
   transition:border-color .2s,transform .2s,box-shadow .2s;
   display:flex;align-items:center;gap:16px;
 }
-.contact-card:hover{
+.contact-row:hover{
   border-color:var(--mint);
-  transform:translateY(-2px);
-  box-shadow:0 4px 20px rgba(100,255,218,.08);
+  transform:translateX(4px);
+  box-shadow:0 4px 20px rgba(100,255,218,.07);
 }
-.contact-card.span-full{grid-column:1 / -1}
 .contact-icon{
-  width:42px;height:42px;border-radius:10px;
+  width:38px;height:38px;border-radius:8px;
   display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;flex-shrink:0;
+  font-size:1rem;flex-shrink:0;
 }
 .ci-email{background:rgba(59,130,246,.15);color:#93C5FD}
 .ci-phone{background:rgba(52,211,153,.15);color:#6EE7B7}
 .ci-li   {background:rgba(59,130,246,.2); color:#60A5FA}
 .ci-gh   {background:rgba(100,255,218,.1);color:var(--mint)}
-.contact-label{font-size:.72rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
-.contact-val  {font-size:.9rem;color:var(--text);font-weight:500;margin-top:3px}
-/* phone card special styling */
-.contact-card.span-full .contact-icon{width:48px;height:48px;font-size:1.3rem}
-.contact-card.span-full .contact-val{font-size:1rem}
-@media(max-width:540px){
-  .contact-grid{grid-template-columns:1fr}
-  .contact-card.span-full{grid-column:auto}
-}
+.contact-label{font-size:.7rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+.contact-val  {font-size:.92rem;color:var(--text);font-weight:500;margin-top:2px}
 /* ── FOOTER ── */
 footer{
   text-align:center;padding:32px;
@@ -495,27 +488,24 @@ footer span{color:var(--mint)}
 <section id="contact">
   <div class="sec-label">Get in touch</div>
   <div class="sec-title">Contact</div>
-  <div class="contact-grid">
-    <!-- Phone — full width, prominent -->
-    <a href="tel:+917378365544" class="contact-card span-full">
-      <div class="contact-icon ci-phone">📞</div>
-      <div><div class="contact-label">Phone</div><div class="contact-val">+91 7378365544</div></div>
-    </a>
-    <!-- Two emails side by side -->
-    <a href="mailto:tajaneyash929@gmail.com" class="contact-card">
+  <div class="contact-list">
+    <a href="mailto:tajaneyash929@gmail.com" class="contact-row">
       <div class="contact-icon ci-email">✉</div>
       <div><div class="contact-label">Email</div><div class="contact-val">tajaneyash929@gmail.com</div></div>
     </a>
-    <a href="mailto:yashrajendratajane@gmail.com" class="contact-card">
+    <a href="mailto:yashrajendratajane@gmail.com" class="contact-row">
       <div class="contact-icon ci-email">✉</div>
       <div><div class="contact-label">Email</div><div class="contact-val">yashrajendratajane@gmail.com</div></div>
     </a>
-    <!-- LinkedIn & GitHub side by side -->
-    <a href="https://linkedin.com/in/yash-tajane-974ab0235" target="_blank" class="contact-card">
-      <div class="contact-icon ci-li">in</div>
-      <div><div class="contact-label">LinkedIn</div><div class="contact-val">yash-tajane-974ab0235</div></div>
+    <a href="tel:+917378365544" class="contact-row">
+      <div class="contact-icon ci-phone">📞</div>
+      <div><div class="contact-label">Phone</div><div class="contact-val">+91 7378365544</div></div>
     </a>
-    <a href="https://github.com/yashtajane" target="_blank" class="contact-card">
+    <a href="https://linkedin.com/in/yash-tajane-974ab0235" target="_blank" class="contact-row">
+      <div class="contact-icon ci-li">in</div>
+      <div><div class="contact-label">LinkedIn</div><div class="contact-val">linkedin.com/in/yash-tajane-974ab0235</div></div>
+    </a>
+    <a href="https://github.com/yashtajane" target="_blank" class="contact-row">
       <div class="contact-icon ci-gh">⌥</div>
       <div><div class="contact-label">GitHub</div><div class="contact-val">github.com/yashtajane</div></div>
     </a>
